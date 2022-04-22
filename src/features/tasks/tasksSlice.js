@@ -12,13 +12,24 @@ export const tasksSlice = createSlice({
             state.tasks[id] = {
                 ...action.payload,
                 inProgress: false,
-                isCompleted: false
+                isComplete: false
             }
         },
-        //startTask:
-        
-        //completeTask:
-
+        startTask: (state, action) => {
+            const { id } = action.payload;
+            state.tasks[id] = {
+                ...state.tasks[id],
+                inProgress: true
+            }
+        },
+        completeTask: (state, action) => {
+            const { id } = action.payload;
+            state.tasks[id] = {
+                ...state.tasks[id],
+                inProgress: false,
+                isComplete: true
+            }
+        },
         removeTask: (state, action) => {
             /* payload has { id, topicId } */
             const { id } = action.payload;
@@ -28,5 +39,5 @@ export const tasksSlice = createSlice({
 });
 
 export const selectTasks = (state) => state.tasks.tasks;
-export const { addTask, removeTask } = tasksSlice.actions;
+export const { addTask, startTask, completeTask, removeTask } = tasksSlice.actions;
 export default tasksSlice.reducer;
