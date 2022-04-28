@@ -18,7 +18,7 @@ export const topicsSlice = createSlice({
         //make sure to iterate over taskIds and dispatch removeTask wherever removeTopic is dispatched
         removeTopic: (state, action) => {
             const { id } = action.payload;
-            delete state[id];
+            delete state.topics[id];
         }
     },
     extraReducers: (builder) => {
