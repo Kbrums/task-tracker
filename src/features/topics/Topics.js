@@ -10,6 +10,7 @@ export default function Topics() {
         <div className="topics-container">
             <h3>Topics</h3>
             <NewTopicForm />
+            <br />
             {Object.values(topics).map( topic => <Topic topic={topic}/>)}
         </div>
     );
