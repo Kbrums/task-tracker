@@ -5,14 +5,12 @@ import { removeTopic } from "./topicsSlice";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import CloseButton from "react-bootstrap/CloseButton";
-import { style } from './topicStyle'
+import './Topics.css';
 
 export default function Topic({topic}) {
 
     const dispatch = useDispatch();
     const { id, title, taskIds } = topic;
-
-    const { containerStyle, cardStyle, closeStyle} = style;
 
     const handleClose = (e) => {
         e.preventDefault();
@@ -26,11 +24,11 @@ export default function Topic({topic}) {
 
     return (
         <>
-            <div style={containerStyle}>
-                <Card style={cardStyle}>
+            <div className='topic-container'>
+                <Card className='card-container'>
                     <Card.Header as='h5'>
                         {title}
-                        <CloseButton  style={closeStyle} onClick={handleClose}/>
+                        <CloseButton  className='close' onClick={handleClose}/>
                     </Card.Header>
                     <Card.Body>this is where tasks will go</Card.Body>
                     <Card.Footer>

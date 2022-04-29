@@ -1,0 +1,19 @@
+.topics-container {
+
+}
+
+.topic-container {
+    display: inline-block;
+    width: 32%;
+}
+
+.card-container {
+    margin: 5px;
+    justify-content: left;
+
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+}
