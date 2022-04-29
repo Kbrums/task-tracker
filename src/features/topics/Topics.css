@@ -1,5 +1,10 @@
 .topics-container {
+    margin-left: 10px;
+    margin-top: 5px;
+}
 
+.add-topic-btn {
+    margin-left: 5px;
 }
 
 .topic-container {

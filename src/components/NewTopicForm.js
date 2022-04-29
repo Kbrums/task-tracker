@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import "../features/topics/Topics.css";
 
 export default function NewTopicForm() {
     //title for new topic
@@ -36,7 +37,7 @@ export default function NewTopicForm() {
     return (
         
         <>
-            <Button variant='outline-primary' onClick={handleShow}>
+            <Button className='add-topic-btn' variant='outline-primary' onClick={handleShow}>
                 Add Topic
             </Button> 
 

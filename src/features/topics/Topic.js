@@ -2,6 +2,7 @@
 //import { selectTasks } from "../tasks/tasksSlice";
 import { useDispatch } from "react-redux";
 import { removeTopic } from "./topicsSlice";
+import { removeTask } from '../tasks/tasksSlice';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import CloseButton from "react-bootstrap/CloseButton";
@@ -15,6 +16,7 @@ export default function Topic({topic}) {
     const handleClose = (e) => {
         e.preventDefault();
         //iterate over taskIDs and dispatch removeTask
+        taskIds.map(taskId => dispatch(removeTask({id: taskId, topicId: id})));
 
         //dispatch remove topic
         dispatch(removeTopic({id: id}));
