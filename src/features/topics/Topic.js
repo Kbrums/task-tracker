@@ -4,9 +4,10 @@ import { useDispatch } from "react-redux";
 import { removeTopic } from "./topicsSlice";
 import { removeTask } from '../tasks/tasksSlice';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import CloseButton from "react-bootstrap/CloseButton";
+import NewTaskForm from "../../components/NewTaskForm";
 import './Topics.css';
+
 
 export default function Topic({topic}) {
 
@@ -32,11 +33,11 @@ export default function Topic({topic}) {
                         {title}
                         <CloseButton  className='close' onClick={handleClose}/>
                     </Card.Header>
-                    <Card.Body>this is where tasks will go</Card.Body>
+                    <Card.Body>
+                        
+                    </Card.Body>
                     <Card.Footer>
-                        <Button variant='outline-primary'>
-                            Add Task
-                        </Button>
+                        <NewTaskForm topicId={id} />
                     </Card.Footer>
                 </Card>
             </div>
