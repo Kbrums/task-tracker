@@ -45,7 +45,7 @@ export default function NewTaskForm({topicId}) {
                 Add Task
             </Button>
 
-            <Modal show={show} onClose={handleClose}>
+            <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Add A New Task</Modal.Title>
                 </Modal.Header>
