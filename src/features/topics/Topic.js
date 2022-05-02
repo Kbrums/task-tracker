@@ -1,7 +1,7 @@
 //import { useSelector } from "react-redux";
 //import { selectTasks } from "../tasks/tasksSlice";
 import { useDispatch } from "react-redux";
-import { removeTopic } from "./topicsSlice";
+import { removeTopic, toggleShowCompleted } from "./topicsSlice";
 import { removeTask } from '../tasks/tasksSlice';
 import Card from 'react-bootstrap/Card';
 import Form from "react-bootstrap/Form";
@@ -13,8 +13,9 @@ import './Topics.css';
 
 export default function Topic({topic}) {
 
+
     const dispatch = useDispatch();
-    const { id, title, taskIds } = topic;
+    const { id, title, taskIds, showCompleted} = topic;
 
     const handleClose = (e) => {
         e.preventDefault();
@@ -24,6 +25,10 @@ export default function Topic({topic}) {
         //dispatch remove topic
         dispatch(removeTopic({id: id}));
 
+    }
+
+    const handleToggle = (e) => {
+        dispatch(toggleShowCompleted({id: id}))
     }
 
 
@@ -36,14 +41,16 @@ export default function Topic({topic}) {
                         <CloseButton  className='close' onClick={handleClose}/>
                     </Card.Header>
                     <Card.Body>
-                        <Tasks topicId={id} />
+                        <Tasks topicId={id} showCompleted={showCompleted}/>
                     </Card.Body>
                     <Card.Footer className='card-footer'>
                         <NewTaskForm topicId={id} />
                         <Form className='completed-check'>
                             <Form.Check
                                 label='Show Completed'
-                                type='checkbox'>
+                                type='checkbox'
+                                checked={showCompleted}
+                                onChange={handleToggle}>
                             </Form.Check>
                         </Form>
                     </Card.Footer>

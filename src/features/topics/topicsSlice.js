@@ -12,7 +12,15 @@ export const topicsSlice = createSlice({
             const { id } = action.payload;
             state.topics[id] = {
                 ...action.payload,
-                taskIds: []
+                taskIds: [],
+                showCompleted: false,
+            }
+        },
+        toggleShowCompleted: (state, action) => {
+            const { id } = action.payload;
+            state.topics[id] = {
+                ...state.topics[id],
+                showCompleted: !(state.topics[id].showCompleted)
             }
         },
         //make sure to iterate over taskIds and dispatch removeTask wherever removeTopic is dispatched
@@ -36,5 +44,5 @@ export const topicsSlice = createSlice({
 });
 
 export const selectTopics = (state) => state.topics.topics;
-export const { addTopic, removeTopic } = topicsSlice.actions;
+export const { addTopic, toggleShowCompleted, removeTopic } = topicsSlice.actions;
 export default topicsSlice.reducer;
