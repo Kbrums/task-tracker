@@ -15,19 +15,19 @@ export const tasksSlice = createSlice({
                 isComplete: false
             }
         },
-        startTask: (state, action) => {
+        toggleProgress: (state, action) => {
             const { id } = action.payload;
             state.tasks[id] = {
                 ...state.tasks[id],
-                inProgress: true
+                inProgress: !state.tasks[id].inProgress,
             }
         },
-        completeTask: (state, action) => {
+        toggleCompletion: (state, action) => {
             const { id } = action.payload;
             state.tasks[id] = {
                 ...state.tasks[id],
                 inProgress: false,
-                isComplete: true
+                isComplete: !state.tasks[id].isComplete
             }
         },
         removeTask: (state, action) => {
@@ -39,5 +39,5 @@ export const tasksSlice = createSlice({
 });
 
 export const selectTasks = (state) => state.tasks.tasks;
-export const { addTask, startTask, completeTask, removeTask } = tasksSlice.actions;
+export const { addTask, toggleProgress, toggleCompletion, removeTask } = tasksSlice.actions;
 export default tasksSlice.reducer;
