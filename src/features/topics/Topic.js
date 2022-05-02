@@ -4,8 +4,8 @@ import { useDispatch } from "react-redux";
 import { removeTopic } from "./topicsSlice";
 import { removeTask } from '../tasks/tasksSlice';
 import Card from 'react-bootstrap/Card';
+import Form from "react-bootstrap/Form";
 import CloseButton from "react-bootstrap/CloseButton";
-import ListGroup from "react-bootstrap/ListGroup";
 import NewTaskForm from "../../components/NewTaskForm";
 import Tasks from "../tasks/Tasks";
 import './Topics.css';
@@ -38,8 +38,14 @@ export default function Topic({topic}) {
                     <Card.Body>
                         <Tasks topicId={id} />
                     </Card.Body>
-                    <Card.Footer>
+                    <Card.Footer className='card-footer'>
                         <NewTaskForm topicId={id} />
+                        <Form className='completed-check'>
+                            <Form.Check
+                                label='Show Completed'
+                                type='checkbox'>
+                            </Form.Check>
+                        </Form>
                     </Card.Footer>
                 </Card>
             </div>

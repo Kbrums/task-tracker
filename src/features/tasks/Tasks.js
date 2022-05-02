@@ -1,4 +1,3 @@
-import Accordion from "react-bootstrap/Accordion";
 import Card from 'react-bootstrap/Card';
 import React, { useState } from 'react';
 import { useSelector } from "react-redux";

@@ -22,3 +22,13 @@
     position: absolute;
     right: 10px;
 }
+
+.card-footer {
+    display: flex;
+}
+
+.completed-check {
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+}
