@@ -5,7 +5,9 @@ import { removeTopic } from "./topicsSlice";
 import { removeTask } from '../tasks/tasksSlice';
 import Card from 'react-bootstrap/Card';
 import CloseButton from "react-bootstrap/CloseButton";
+import ListGroup from "react-bootstrap/ListGroup";
 import NewTaskForm from "../../components/NewTaskForm";
+import Tasks from "../tasks/Tasks";
 import './Topics.css';
 
 
@@ -34,7 +36,7 @@ export default function Topic({topic}) {
                         <CloseButton  className='close' onClick={handleClose}/>
                     </Card.Header>
                     <Card.Body>
-                        
+                        <Tasks topicId={id} />
                     </Card.Body>
                     <Card.Footer>
                         <NewTaskForm topicId={id} />
