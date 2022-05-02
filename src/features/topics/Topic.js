@@ -1,5 +1,3 @@
-//import { useSelector } from "react-redux";
-//import { selectTasks } from "../tasks/tasksSlice";
 import { useDispatch } from "react-redux";
 import { removeTopic, toggleShowCompleted } from "./topicsSlice";
 import { removeTask } from '../tasks/tasksSlice';
