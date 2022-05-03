@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { removeTopic, toggleShowCompleted } from "./topicsSlice";
 import { removeTask } from '../tasks/tasksSlice';
-import Card from 'react-bootstrap/Card';
 import Form from "react-bootstrap/Form";
 import CloseButton from "react-bootstrap/CloseButton";
 import NewTaskForm from "../../components/NewTaskForm";
@@ -32,27 +31,26 @@ export default function Topic({topic}) {
 
     return (
         <>
+
             <div className='topic-container'>
-                <Card className='card-container'>
-                    <Card.Header className='card-header' as='h5'>
-                        {title}
-                        <CloseButton  className='close' onClick={handleClose}/>
-                    </Card.Header>
-                    <Card.Body>
-                        <Tasks topicId={id} showCompleted={showCompleted}/>
-                    </Card.Body>
-                    <Card.Footer className='card-footer'>
-                        <NewTaskForm topicId={id} />
-                        <Form>
-                            <Form.Check
-                                label='Show Completed'
-                                type='checkbox'
-                                checked={showCompleted}
-                                onChange={handleToggle}>
-                            </Form.Check>
-                        </Form>
-                    </Card.Footer>
-                </Card>
+                <div className='topic-title-container'>
+                    <span className='topic-title'>{title}</span>
+                    <CloseButton  className='close' onClick={handleClose}/>
+                </div>
+                <div className='topic-body-container'>
+                    <Tasks topicId={id} showCompleted={showCompleted}/>
+                </div>
+                <div className='topic-footer'>
+                    <NewTaskForm topicId={id} />
+                    <Form>
+                        <Form.Check
+                            label='Show Completed'
+                            type='checkbox'
+                            checked={showCompleted}
+                            onChange={handleToggle}>
+                        </Form.Check>
+                    </Form>
+                </div>
             </div>
         </>
     )

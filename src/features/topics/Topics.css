@@ -1,6 +1,19 @@
+.body-container {
+    margin: 5px;
+}
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .topics-container {
     margin-left: 10px;
     margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .add-topic-btn {
@@ -8,24 +21,27 @@
 }
 
 .topic-container {
-    display: inline-block;
-    width: 33%;
+    display: inline;
+    min-width: 32%;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 6px;
+    box-shadow: 5px 10px black;
 }
 
-.card-container {
-    margin: 5px;
-    justify-content: left;
-
-}
-
-.card-header {
+.topic-title-container {
+    padding: 10px;
+    border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.card-footer {
+.topic-footer {
+    padding: 10px;
+    border-top: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }

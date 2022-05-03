@@ -7,11 +7,14 @@ export default function Topics() {
     const topics = useSelector(selectTopics);
 
     return (
-        <div className="topics-container">
-            <h3>Topics</h3>
-            <NewTopicForm />
-            <br />
-            {Object.values(topics).map( topic => <Topic topic={topic}/>)}
-        </div>
+        <div className='body-container'>
+            <div className="head-container">
+                <h3>Topics</h3>
+                <NewTopicForm />
+            </div>
+            <div className='topics-container'>
+                {Object.values(topics).map( topic => <Topic topic={topic}/>)}
+            </div>
+        </div> 
     );
 }
