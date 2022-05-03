@@ -43,7 +43,7 @@ export default function Topic({topic}) {
                     </Card.Body>
                     <Card.Footer className='card-footer'>
                         <NewTaskForm topicId={id} />
-                        <Form className='completed-check'>
+                        <Form>
                             <Form.Check
                                 label='Show Completed'
                                 type='checkbox'

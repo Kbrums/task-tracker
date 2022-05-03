@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { toggleProgress, toggleCompletion } from './tasksSlice';
 
 
-export default function Task({task, status}) {
+export default function Task({task, type}) {
 
     const dispatch = useDispatch();
     const { id, inProgress, isComplete} = task;
@@ -17,9 +17,10 @@ export default function Task({task, status}) {
         dispatch(toggleCompletion({id: id}));
     }
 
+
     return (
         <>
-            <Card>
+            <Card >
                 <Card.Body>
                     <Card.Title>{task.title}</Card.Title>
                     <Card.Text>
@@ -27,14 +28,16 @@ export default function Task({task, status}) {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <Form className='task-checks'>
+                    <Form>
                         <Form.Check
+                        inline
                         label='In Progress'
                         type='checkbox'
                         checked={inProgress}
                         onChange={handleToggleProgress}>
                         </Form.Check>
                         <Form.Check
+                        inline
                         label='Completed'
                         type='checkbox'
                         checked={isComplete}

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useSelector } from "react-redux";
 import { selectTasks } from "./tasksSlice";
 import Task from './Task';
@@ -17,13 +16,13 @@ export default function Tasks({topicId, showCompleted}) {
     return( 
         <>
             {noProgressTasks.map((task) => (
-                <Task task={task} status='noProgress'/>
+                <Task task={task} type='no-progress'/>
             ))}
             {inProgressTasks.map((task) => (
-                <Task task={task} status='inProgress'/>
+                <Task task={task} type='in-progress'/>
             ))}
             {showCompleted ? completedTasks.map((task) => (
-                <Task task={task} status='complete'/>
+                <Task task={task} type='complete'/>
             )): null}
         </>
     );
