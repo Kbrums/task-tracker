@@ -1,4 +1,3 @@
-import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import CloseButton from 'react-bootstrap/CloseButton';
 import { useDispatch } from 'react-redux';
@@ -25,17 +24,15 @@ export default function Task({task, type, topicId}) {
 
     return (
         <>
-            <Card >
-                <Card.Body>
-                    <Card.Title className='card-title'>
-                        {task.title}
-                        <CloseButton size='sm' onClick={handleClose}/>
-                    </Card.Title>
-                    <Card.Text>
-                        {task.description}
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer>
+            <div className={"task-container "+type}>
+                <div className="task-title-container header-footer">
+                    <span className="task-title">{task.title}</span>
+                    <CloseButton size='sm' onClick={handleClose}/>
+                </div>
+                <div className="task-descr-container">
+                    <span className="task-descr">{task.description}</span>
+                </div>
+                <div className="task-footer-container">
                     <Form>
                         <Form.Check
                         inline
@@ -53,8 +50,8 @@ export default function Task({task, type, topicId}) {
                         onChange={handleToggleCompletion}>
                         </Form.Check>
                     </Form>
-                </Card.Footer>
-            </Card>
+                </div>
+            </div>
         </>
     );
 }

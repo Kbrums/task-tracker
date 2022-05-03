@@ -21,8 +21,10 @@
 }
 
 .topic-container {
-    display: inline;
+    display: flex;
+    flex-direction: column;
     min-width: 32%;
+    max-width: 49%;
     border: 1px solid black;
     border-radius: 3px;
     margin: 6px;
