@@ -1,10 +1,11 @@
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
+import CloseButton from 'react-bootstrap/CloseButton';
 import { useDispatch } from 'react-redux';
-import { toggleProgress, toggleCompletion } from './tasksSlice';
+import { toggleProgress, toggleCompletion, removeTask } from './tasksSlice';
 
 
-export default function Task({task, type}) {
+export default function Task({task, type, topicId}) {
 
     const dispatch = useDispatch();
     const { id, inProgress, isComplete} = task;
@@ -17,12 +18,19 @@ export default function Task({task, type}) {
         dispatch(toggleCompletion({id: id}));
     }
 
+    const handleClose = (e) => {
+        dispatch(removeTask({id: id, topicId: topicId}));
+    }
+
 
     return (
         <>
             <Card >
                 <Card.Body>
-                    <Card.Title>{task.title}</Card.Title>
+                    <Card.Title className='card-title'>
+                        {task.title}
+                        <CloseButton size='sm' onClick={handleClose}/>
+                    </Card.Title>
                     <Card.Text>
                         {task.description}
                     </Card.Text>
@@ -33,6 +41,7 @@ export default function Task({task, type}) {
                         inline
                         label='In Progress'
                         type='checkbox'
+                        disabled={isComplete}
                         checked={inProgress}
                         onChange={handleToggleProgress}>
                         </Form.Check>

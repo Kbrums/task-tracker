@@ -16,13 +16,13 @@ export default function Tasks({topicId, showCompleted}) {
     return( 
         <>
             {noProgressTasks.map((task) => (
-                <Task task={task} type='no-progress'/>
+                <Task task={task} type='no-progress' topicId={topicId}/>
             ))}
             {inProgressTasks.map((task) => (
-                <Task task={task} type='in-progress'/>
+                <Task task={task} type='in-progress' topicId={topicId}/>
             ))}
             {showCompleted ? completedTasks.map((task) => (
-                <Task task={task} type='complete'/>
+                <Task task={task} type='complete' topicId={topicId}/>
             )): null}
         </>
     );

@@ -34,7 +34,7 @@ export default function Topic({topic}) {
         <>
             <div className='topic-container'>
                 <Card className='card-container'>
-                    <Card.Header as='h5'>
+                    <Card.Header className='card-header' as='h5'>
                         {title}
                         <CloseButton  className='close' onClick={handleClose}/>
                     </Card.Header>

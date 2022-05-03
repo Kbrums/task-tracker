@@ -18,9 +18,10 @@
 
 }
 
-.close {
-    position: absolute;
-    right: 10px;
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .card-footer {
