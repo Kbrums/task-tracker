@@ -19,7 +19,7 @@
   color: #313638;
   border: 1px solid #313638;
   border-radius: 4px;
-  box-shadow: 7px 7px #E4B363, 14px 14px #EF6461;
+  box-shadow: 7px 7px #EF6461, 14px 14px #E4B363;
 }
 
 @keyframes App-logo-spin {

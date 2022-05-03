@@ -2,6 +2,12 @@
     margin: 5px;
 }
 
+.custom-modal .modal-content {
+    background-color: #E8E9EB;
+    border: 1px solid #313638;
+    box-shadow: 5px 5px black;
+}
+
 .head-container {
     display: flex;
     justify-content: space-around;
@@ -10,19 +16,38 @@
 
 .topics-container {
     margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 12px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
 }
 
-.add-topic-btn {
-    margin-left: 5px;
+.button {
+    background-color: E8E9EB;
+    padding: 5px 10px;
+    font-size: 1.1rem;
     border: 1px solid #313638;
     color: E8E9EB;
     border-radius: 4px;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.add {
     box-shadow: 5px 5px #313638;
 }
+
+.submit {
+    box-shadow: 5px 5px #578C5E
+}
+
+.cancel {
+    box-shadow: 5px 5px #EF6461
+}
+
+
 
 .topic-container {
     background-color: #E8E9EB;
@@ -30,15 +55,15 @@
     flex-direction: column;
     min-width: 32%;
     max-width: 49%;
-    border: 1px solid black;
-    border-radius: 3px;
+    border: 1px solid #313638;
+    border-radius: 4px;
     margin: 6px;
-    box-shadow: 5px 10px black;
+    box-shadow: 5px 7px #313638;
 }
 
 .topic-title-container {
     padding: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #313638;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +71,7 @@
 
 .topic-footer {
     padding: 10px;
-    border-top: 1px solid black;
+    border-top: 1px solid #313638;
     display: flex;
     justify-content: space-between;
     align-items: center;

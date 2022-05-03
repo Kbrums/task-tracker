@@ -37,13 +37,13 @@ export default function NewTopicForm() {
     return (
         
         <>
-            <button className='add-topic-btn' onClick={handleShow}>Add Topic</button>
+            <button className='add button' onClick={handleShow}>Add Topic</button>
 
-            <Modal show={show}  onHide={handleClose}>
-                <Modal.Header className="modal" closeButton>
+            <Modal show={show} className='custom-modal' onHide={handleClose}>
+                <Modal.Header closeButton>
                     <Modal.Title>Add A New Topic</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="modal">
+                <Modal.Body>
                     <Form>
                         <Form.Group>
                             <Form.Label>Title</Form.Label>
@@ -54,13 +54,9 @@ export default function NewTopicForm() {
                         </Form.Group>
                      </Form>
                 </Modal.Body>
-                <Modal.Footer className="modal">
-                    <Button variant='outline-secondary' onClick={handleClose}>
-                        Cancel
-                    </Button>
-                    <Button variant='outline-primary' onClick={handleSubmit}>
-                        Submit
-                    </Button>
+                <Modal.Footer>
+                    <button className='cancel button' onClick={handleClose}>Cancel</button>
+                    <button className='submit button' onClick={handleSubmit}>Submit</button>
                 </Modal.Footer>
             </Modal>
 
