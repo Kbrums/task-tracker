@@ -5,9 +5,11 @@ import Topics from '../features/topics/Topics'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>Task Tracker</h2>
-      </header>
+      <div className='header-container'>
+        <header className="App-header">
+          <h2>Task Tracker</h2>
+        </header>
+      </div>
       <div className="main-container">
         <Topics />
       </div>

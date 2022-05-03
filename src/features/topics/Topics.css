@@ -4,7 +4,7 @@
 
 .head-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -18,9 +18,14 @@
 
 .add-topic-btn {
     margin-left: 5px;
+    border: 1px solid #313638;
+    color: E8E9EB;
+    border-radius: 4px;
+    box-shadow: 5px 5px #313638;
 }
 
 .topic-container {
+    background-color: #E8E9EB;
     display: flex;
     flex-direction: column;
     min-width: 32%;

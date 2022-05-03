@@ -9,7 +9,6 @@ export default function Topics() {
     return (
         <div className='body-container'>
             <div className="head-container">
-                <h3>Topics</h3>
                 <NewTopicForm />
             </div>
             <div className='topics-container'>
