@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTask } from '../features/tasks/tasksSlice';
 import { v4 as uuidv4 } from "uuid";
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import '../features/tasks/Tasks.css';
 
 
 export default function NewTaskForm({topicId}) {
@@ -41,11 +41,9 @@ export default function NewTaskForm({topicId}) {
 
     return (
         <>  
-            <Button variant='outline-primary' onClick={handleShow}>
-                Add Task
-            </Button>
+            <button className='add button' onClick={handleShow}>Add Task</button>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} className="custom-modal" onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Add A New Task</Modal.Title>
                 </Modal.Header>
@@ -71,12 +69,8 @@ export default function NewTaskForm({topicId}) {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant='outline-secondary' onClick={handleClose}>
-                        Cancel
-                    </Button>
-                    <Button variant='outline-primary' onClick={handleSubmit}>
-                        Submit
-                    </Button>
+                    <button className='cancel button' onClick={handleClose}>Cancel</button>
+                    <button className='submit button' onClick={handleSubmit}>Submit</button>
                 </Modal.Footer>
 
             </Modal>

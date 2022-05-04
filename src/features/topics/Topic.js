@@ -35,7 +35,7 @@ export default function Topic({topic}) {
             <div className='topic-container'>
                 <div className='topic-title-container'>
                     <span className='topic-title'>{title}</span>
-                    <CloseButton  className='close' onClick={handleClose}/>
+                    <button  className='close' onClick={handleClose}/>
                 </div>
                 <div className='topic-body-container'>
                     <Tasks topicId={id} showCompleted={showCompleted}/>

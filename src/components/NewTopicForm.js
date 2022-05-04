@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { addTopic } from '../features/topics/topicsSlice';
 import { useDispatch} from 'react-redux';
 import { v4 as uuidv4 } from "uuid";
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import "../features/topics/Topics.css";

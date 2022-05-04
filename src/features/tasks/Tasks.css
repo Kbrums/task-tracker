@@ -1,6 +1,7 @@
 
 .task-container{
     border: 1px solid black;
+    border-radius: 3px;
     margin: 3px 10px 15px 3px;
 }
 
@@ -22,7 +23,7 @@
 }
 
 .no-progress {
-    box-shadow: 3px 5px darkgrey;
+    box-shadow: 3px 5px #313638;
 }
 
 .in-progress {
@@ -31,4 +32,60 @@
 
 .complete {
     box-shadow: 3px 5px green;
+}
+
+.custom-modal .modal-content {
+    background-color: #E8E9EB;
+    border: 1px solid #313638;
+    box-shadow: 5px 5px black;
+}
+
+.button {
+    background-color: E8E9EB;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border: 1px solid #313638;
+    color: E8E9EB;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.add {
+    box-shadow: 5px 5px #313638;
+}
+
+.submit {
+    box-shadow: 5px 5px #578C5E
+}
+
+.cancel {
+    box-shadow: 5px 5px #EF6461
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button-small {
+    margin-left: 3px;
+    padding: 7px 7px;
+    font-size: 1.1rem;
+    border: 1px solid #313638;
+    border-radius: 4px;
+}
+
+.remove {
+    background-color: #EF6461;
+}
+
+.completed {
+    background-color: #578C5E;
+}
+
+.inprogress {
+    background-color: #E4B363;
 }

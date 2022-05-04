@@ -23,11 +23,11 @@
 }
 
 .button {
-    background-color: E8E9EB;
+    background-color: #E8E9EB;
     padding: 5px 10px;
     font-size: 1.1rem;
     border: 1px solid #313638;
-    color: E8E9EB;
+    color: #313638;
     border-radius: 4px;
 }
 
@@ -45,6 +45,15 @@
 
 .cancel {
     box-shadow: 5px 5px #EF6461
+}
+
+.close {
+    background-color: #EF6461;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+    border: 1px solid #313638;
+    color: #313638;
+    border-radius: 4px;
 }
 
 
