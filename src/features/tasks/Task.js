@@ -1,5 +1,3 @@
-import Form from 'react-bootstrap/Form';
-import CloseButton from 'react-bootstrap/CloseButton';
 import { useDispatch } from 'react-redux';
 import { toggleProgress, toggleCompletion, removeTask } from './tasksSlice';
 import './Tasks.css';
@@ -8,7 +6,7 @@ import './Tasks.css';
 export default function Task({task, type, topicId}) {
 
     const dispatch = useDispatch();
-    const { id, inProgress, isComplete} = task;
+    const { id, isComplete} = task;
 
     const handleToggleProgress = (e) => {
         dispatch(toggleProgress({id: id}));

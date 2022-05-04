@@ -2,7 +2,6 @@ import { useDispatch } from "react-redux";
 import { removeTopic, toggleShowCompleted } from "./topicsSlice";
 import { removeTask } from '../tasks/tasksSlice';
 import Form from "react-bootstrap/Form";
-import CloseButton from "react-bootstrap/CloseButton";
 import NewTaskForm from "../../components/NewTaskForm";
 import Tasks from "../tasks/Tasks";
 import './Topics.css';

@@ -1,5 +1,7 @@
 import './App.css';
+import '../features/topics/Topics.css';
 import Topics from '../features/topics/Topics'
+import NewTopicForm from '../components/NewTopicForm'
 
 
 function App() {
@@ -9,8 +11,9 @@ function App() {
         <header className="App-header">
           <h2>Task Tracker</h2>
         </header>
+        <NewTopicForm />
       </div>
-      <div className="main-container">
+      <div className="body-container">
         <Topics />
       </div>
     </div>

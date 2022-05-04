@@ -1,21 +1,25 @@
 .App {
   text-align: left;
+  font-family: 'Kanit', sans-serif;
+
 }
 
 .header-container {
   display: flex;
-  justify-content: space-around;
-  margin: 8px;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin: 15px;
 }
 
 .App-header {
   background-color: #E8E9EB;
-  min-height: 80px;
+  height: 80px;
   display: flex;
   width: 30%;
   justify-content: space-around;
   align-items: center;
-  font-size: calc(10px + 2vmin);
+  /**font-family: 'Kanit', sans-serif;**/
   color: #313638;
   border: 1px solid #313638;
   border-radius: 4px;
