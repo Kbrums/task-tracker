@@ -41,7 +41,7 @@ export default function NewTaskForm({topicId}) {
 
     return (
         <>  
-            <button className='add button' onClick={handleShow}>Add Task</button>
+            <button className='add add-task-button' onClick={handleShow}>Add Task</button>
 
             <Modal show={show} className="custom-modal" onHide={handleClose}>
                 <Modal.Header closeButton>

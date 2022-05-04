@@ -2,7 +2,7 @@
 .task-container{
     border: 1px solid black;
     border-radius: 3px;
-    margin: 3px 10px 15px 3px;
+    margin: 3px 10px 10px 6px;
 }
 
 .task-title-container{
@@ -11,6 +11,9 @@
     align-items: center;
     padding: 5px;
     border-bottom: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    font-weight: 500;
 }
 
 .task-descr-container{
@@ -23,15 +26,15 @@
 }
 
 .no-progress {
-    box-shadow: 3px 5px #313638;
+    box-shadow: 3px 3px #313638;
 }
 
 .in-progress {
-    box-shadow: 3px 5px #E4B363;
+    box-shadow: 3px 3px #E4B363;
 }
 
 .complete {
-    box-shadow: 3px 5px green;
+    box-shadow: 3px 3px green;
 }
 
 .custom-modal .modal-content {
@@ -40,16 +43,15 @@
     box-shadow: 5px 5px black;
 }
 
-.button {
-    background-color: E8E9EB;
+.add-task-button {
+    background-color: #E8E9EB;
     padding: 5px 10px;
-    font-size: 1.1rem;
     border: 1px solid #313638;
     color: E8E9EB;
     border-radius: 4px;
 }
 
-.button:hover {
+.add-task-button:hover {
     background-color: white;
 }
 

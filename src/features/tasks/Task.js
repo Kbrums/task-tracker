@@ -37,25 +37,6 @@ export default function Task({task, type, topicId}) {
                 <div className="task-descr-container">
                     <span className="task-descr">{task.description}</span>
                 </div>
-                <div className="task-footer-container">
-                    <Form>
-                        <Form.Check
-                        inline
-                        label='In Progress'
-                        type='checkbox'
-                        disabled={isComplete}
-                        checked={inProgress}
-                        onChange={handleToggleProgress}>
-                        </Form.Check>
-                        <Form.Check
-                        inline
-                        label='Completed'
-                        type='checkbox'
-                        checked={isComplete}
-                        onChange={handleToggleCompletion}>
-                        </Form.Check>
-                    </Form>
-                </div>
             </div>
         </>
     );
