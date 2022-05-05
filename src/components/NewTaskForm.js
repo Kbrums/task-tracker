@@ -54,15 +54,18 @@ export default function NewTaskForm({topicId}) {
                             <Form.Control
                                value={title}
                                type='text'
+                               maxLength="40"
                                onChange={(e) => setTitle(e.currentTarget.value)}
                                />
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Description</Form.Label>
                             <Form.Control
+                                required
                                 value={description} 
                                 as='textarea'
-                                rows={2}
+                                rows={3}
+                                maxLength="300"
                                 onChange={(e) => setDescription(e.currentTarget.value)}
                                 />
                         </Form.Group>

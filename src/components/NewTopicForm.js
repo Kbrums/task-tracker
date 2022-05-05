@@ -49,7 +49,7 @@ export default function NewTopicForm() {
                             <Form.Control
                                 value={title}
                                 type='text'
-                                maxLength='35'
+                                maxLength='40'
                                 onChange={(e) => setTitle(e.currentTarget.value)}/>
                         </Form.Group>
                      </Form>

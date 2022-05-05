@@ -17,20 +17,10 @@
   height: 80px;
   display: flex;
   width: 30%;
-  justify-content: space-around;
+  justify-content:center;
   align-items: center;
-  /**font-family: 'Kanit', sans-serif;**/
   color: #313638;
   border: 1px solid #313638;
   border-radius: 4px;
-  box-shadow: 7px 7px #EF6461, 14px 14px #E4B363;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  box-shadow: 7px 7px #E4B363, 14px 14px #578C5E;
 }

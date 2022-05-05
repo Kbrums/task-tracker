@@ -16,6 +16,14 @@
     font-weight: 500;
 }
 
+.task-title {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
 .task-descr-container{
     padding: 5px;
     margin-left: 3px;
@@ -44,7 +52,7 @@
 }
 
 .complete {
-    box-shadow: 3px 3px green;
+    box-shadow: 3px 3px #578C5E;
 }
 
 .custom-modal .modal-content {
