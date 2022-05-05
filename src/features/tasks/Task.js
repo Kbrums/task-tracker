@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { toggleProgress, toggleCompletion, removeTask } from './tasksSlice';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import './Tasks.css';
 
 
@@ -27,9 +29,39 @@ export default function Task({task, type, topicId}) {
                 <div className="task-title-container header-footer">
                     <span className="task-title">{task.title}</span>
                     <div className='control-buttons'>
-                        <button className='button-small inprogress' disabled={isComplete} onClick={handleToggleProgress}/>
-                        <button className='button-small completed' onClick={handleToggleCompletion}/>
-                        <button className='button-small remove' onClick={handleClose}/>
+                        <OverlayTrigger
+                            key='progress'
+                            placement='top'
+                            delay={{ show: 850, hide: 400 }}
+                            overlay={
+                                <Tooltip className='tooltip' id='progress'>
+                                    Set Task 'In Progress'
+                                </Tooltip>
+                            } >
+                            <button className='button-small inprogress' disabled={isComplete} onClick={handleToggleProgress}/>
+                        </OverlayTrigger>
+                        <OverlayTrigger
+                            key='complete'
+                            placement='top'
+                            delay={{ show: 850, hide: 400 }}
+                            overlay={
+                                <Tooltip className='tooltip' id='complete'>
+                                    Set Test 'Complete'
+                                </Tooltip>
+                            }>
+                            <button className='button-small completed' onClick={handleToggleCompletion}/>
+                        </OverlayTrigger>
+                        <OverlayTrigger
+                            key='remove'
+                            placement='top'
+                            delay={{ show: 850, hide: 400 }}
+                            overlay={
+                                <Tooltip className='tooltip' id='remove'>
+                                    Delete Task
+                                </Tooltip>
+                            }>
+                            <button className='button-small remove' onClick={handleClose}/>
+                        </OverlayTrigger>
                     </div>
                 </div>
                 <div className="task-descr-container">

@@ -110,3 +110,13 @@
 .inprogress {
     background-color: #E4B363;
 }
+
+.tooltip > div.tooltip-inner {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.tooltip.show {
+    opacity: 1 !important;
+}
