@@ -24,3 +24,9 @@
   border-radius: 4px;
   box-shadow: 7px 7px #E4B363, 14px 14px #578C5E;
 }
+
+@media screen and (max-width: 530px) {
+  h2 {
+    margin-left: 8px;
+  }
+}
