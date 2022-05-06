@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Task Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Simple front-end app to practice using react and redux/toolkit.
 
 ## Available Scripts
 
